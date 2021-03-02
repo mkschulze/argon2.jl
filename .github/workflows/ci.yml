@@ -14,14 +14,9 @@ jobs:
           - 'nightly'
         os:
           - ubuntu-latest
-          - macOS-latest
-          - windows-latest
         arch:
           - x64
           - x86
-        exclude:
-          - os: macOS-latest
-            arch: x86
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
@@ -59,8 +54,9 @@ jobs:
             Pkg.instantiate()'
       - run: |
           julia --project=docs -e '
-            using Documenter: doctest
+            using Documenter: DocMeta, doctest
             using argon2
+            DocMeta.setdocmeta!(argon2, :DocTestSetup, :(using argon2); recursive=true)
             doctest(argon2)'
       - run: julia --project=docs docs/make.jl
         env:

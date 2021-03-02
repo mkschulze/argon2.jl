@@ -1,7 +1,10 @@
 name = "argon2"
-uuid = "640aa21a-30b6-43b6-9b50-426cf8b86a3f"
-authors = ["Mark Schulze"]
+uuid = "5466bf5f-6345-4075-8c35-edb5e6886d7c"
+authors = ["M. Schulze"]
 version = "0.1.0"
+
+[deps]
+Clang = "40e3b903-d033-50b4-a0cc-940c62c95e31"
 
 [compat]
 julia = "1.5"

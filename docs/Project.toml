@@ -1,3 +1,3 @@
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-argon2 = "640aa21a-30b6-43b6-9b50-426cf8b86a3f"
+argon2 = "5466bf5f-6345-4075-8c35-edb5e6886d7c"
